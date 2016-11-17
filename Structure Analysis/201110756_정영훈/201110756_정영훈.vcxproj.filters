@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="헤더 파일">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="geometry">
+      <UniqueIdentifier>{d1dde116-d6f3-467f-b6cf-31b9d961bc36}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="structure">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="calculator">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="main">
+      <UniqueIdentifier>{10cb3d34-6e29-4e31-af7f-86e2d69f66c1}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="line.cpp">
+      <Filter>geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="point.cpp">
+      <Filter>geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="wire.cpp">
+      <Filter>structure</Filter>
+    </ClCompile>
+    <ClCompile Include="truss.cpp">
+      <Filter>structure</Filter>
+    </ClCompile>
+    <ClCompile Include="Frame.cpp">
+      <Filter>structure</Filter>
+    </ClCompile>
+    <ClCompile Include="graph.cpp">
+      <Filter>geometry</Filter>
+    </ClCompile>
+    <ClCompile Include="structure.cpp">
+      <Filter>structure</Filter>
+    </ClCompile>
+    <ClCompile Include="example.cpp">
+      <Filter>calculator</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>main</Filter>
+    </ClCompile>
+    <ClCompile Include="Polynominal.cpp">
+      <Filter>calculator</Filter>
+    </ClCompile>
+    <ClCompile Include="NR.cpp">
+      <Filter>calculator</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="geometry.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="structure.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="example.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="Polynominal.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="NR.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

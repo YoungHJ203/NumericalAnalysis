@@ -1,5 +1,8 @@
 #pragma once
 #include"Matrix.h"
+#include"Point.h"
+#include"GE.h"
+#include<fstream>
 
 // Polynominal Regression Class
 class Regression {
@@ -25,16 +28,64 @@ public:
 	}
 
 	// destructor
-	~Regression() {
-		// return memories that are not needed anymore
-		a.~Matrix();
-		y.~Matrix();
-		x.~Matrix();
+	~Regression() {}
+
+	// enter data points by hand
+	void input() {
+		int numD = this->numData;					// current number of data points that are already entered
+		int residual = this->a.getNRow() - numD;	// the number of data points that can be more enterd
+
+		// when the memories are defficient
+		if (residual <= 0) {
+			this->a.setRow(this->a.getNRow() + 1);
+			this->x.setRow(this->x.getNRow() + 1);
+			this->y.setRow(this->y.getNRow() + 1);
+		}
+
+		// enter the data
+		cout << "======== " << numD + 1 << " ========" << endl;
+		cout << "y = " << endl;
+		cin >> this->y(numD + 1, 1);
+
+		for (int i = 1; i <= this->order+1; i++) {
+			cout << "x" << i-1 << " = ";
+			cin >> this->x(numD + 1, i);
+		}
+
+		cout << "==================================" << endl;
 	}
 
-	// data input
-	void input() {
-		
+	// enter data points through array
+	void input(Array<Point>& a) {
+		int numD = this->numData;					// current number of data points that are already entered
+		int size = a.getEleNumber();				// the number of data points that are going to be entered
+		int residual = this->a.getNRow() - numD;	// the number of data points that can be more entered 
+
+		// check if the object has enough memories
+		if (residual<size) {
+			this->a.setRow(numD + size);
+			this->x.setRow(numD + size);
+			this->y.setRow(numD + size);
+		}
+
+		// input the data points into the matrices that are needed for regression
+		for (int i = numD; i < numD + size; i++) {
+			this->y(i + 1, 1) = a[i].getY();
+			float coef = 1;
+
+			for (int j = 1; j <= this->order+1; j++) {	
+				this->x(i + 1, j) = coef;
+				coef *= a[i].getX();
+			}
+		}
+
+		// increase the number ;of input data points
+		this->numData += size;
+	}
+
+	// check if the regression is done
+	bool isDone() {
+		return this->status;
 	}
 
 	// regress the given data points
@@ -44,11 +95,17 @@ public:
 		// condition where data points can be regressed
 		if (this->numData >= m) {
 			// multiply transposed x and x
-
-			// inverse matrix of temp
-
+			Matrix temp = x.Trans()*x;
+			x.printMatrix();
+			y.printMatrix();
+			temp.printMatrix();
+			Matrix right = x.Trans()*y;
+			right.printMatrix();
 			// get the coefficients of regression function
+			this->a=GE::elimination(temp, right);
 
+			// change the status 
+			this->status = 1;
 		}
 
 		// when the more data points are needed
@@ -60,13 +117,48 @@ public:
 
 	// print the regression function
 	void printRegression() {
-	
-	
+		if (this->isDone()) {
+			cout << "regression polynominal function" << endl;
+			cout << "y = ";
+			for (int i = 0; i < this->order+1; i++) {
+				cout << this->a(i + 1, 1);
+				if (i > 0) {
+					cout << "x^" <<i ;
+				}
+				if (i != this->order) {
+					if (this->a(i + 2, 1) >= 0) {
+						cout << "+";
+					}
+				}
+			}
+
+			cout << endl;
+		}
 	}
 
 	// save the regression function's coeffcients
 	void saveRegression() {
-	
+		if (this->isDone()) {
+			// out file stream
+			ofstream ofs;
+
+			// file open by write mode 
+			ofs.open("regression.csv",ios::out);
+
+			// unable to open the file
+			if (!ofs) {
+				cout << "Unable to open the file" << endl;
+				exit(0);
+			}
+
+			// writing
+			for (int i = 0; i < this->order + 1; i++) {
+				ofs << this->a(i + 1, 1) << ",";
+			}
+
+			// file close
+			ofs.close();
+		}
 	}
 
 private:

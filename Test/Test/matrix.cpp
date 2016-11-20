@@ -10,7 +10,6 @@ Matrix::Matrix() {
 
 // copy constructor
 Matrix::Matrix(Matrix & a) {
-	cout << "Matrix copy constructor" << endl;
 	this->nRow = a.nRow;
 	this->nCol = a.nCol;
 	int size = this->nRow*this->nCol;
@@ -24,6 +23,11 @@ Matrix::Matrix(Matrix & a) {
 			(*this)(i,j)= a(i,j);
 		}
 	}
+
+#ifdef DEBUG
+	cout << "Matrix copy constructor" << endl;
+#endif
+
 }
 
 // size setting constructor
@@ -46,15 +50,16 @@ Matrix::Matrix(int nRow, int nCol, Array<float> a) {
 		// copy each 
 		for (int i = 0; i < this->nRow; i++) {
 			for (int j = 0; j < this->nCol; j++) {
-				this->matrix[i*this->nRow + j] = a[i*this->nRow + j];
+				this->matrix[i*this->nCol + j] = a[i*this->nCol+ j];
 			}
 		}
 	}
-
-	// throw exception
-	string msg = "A copy constructor can't be proceeded";
-	cout << msg << endl;
-	throw msg;
+	else {
+		// throw exception
+		string msg = "A copy constructor can't be proceeded";
+		cout << msg << endl;
+		throw msg;
+	}
 }
 
 // convert constructor
@@ -78,7 +83,7 @@ void Matrix::printMatrix() {
 	for (int i = 0; i < this->nRow; i++) {
 		cout << "  ";
 		for (int j = 0; j < this->nCol; j++) {
-			cout << this->matrix[i*this->nRow + j];
+			cout << this->matrix[i*this->nCol+ j];
 			cout << "\t";
 		}
 		cout << endl;

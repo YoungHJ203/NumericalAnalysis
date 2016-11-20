@@ -13,7 +13,7 @@ public:
 	Array(int size = 10);
 
 	// copy Constructor
-	Array(const Array & a);
+	Array(Array<T> & a);
 
 	// destructor
 	inline ~Array();
@@ -63,6 +63,9 @@ public:
 	// increase the size of an array
 	void resize(int n);
 
+	// make the array reversed
+	void reverse();
+
 private:
 	// relocate the elements between the index of first and last (mode = 0 ; push backward, mode =1 ; push forward)
 	void relocate(int first, int last, int mode);
@@ -73,25 +76,22 @@ private:
 };
 
 // constructor
-template <typename T> Array<T>::Array(int size = 10) {
+template <typename T> Array<T>::Array(int size) {
 	// set the size of an array
 	this->size = size;
 
 	// allocate memories needed for an array
 	this->arr = new T[size];
 
-	// initate the values of elements
-	for (int i = 0; i < this->size; i++) {
-		this->arr[i] = 0;
-	}
-
 	// set the number of elements to zero
 	this->top = -1;
 }
 
 // copy constructor
-template <typename T> Array<T>::Array(const Array & a) {
+template <typename T> Array<T>::Array(Array<T> & a) {
+#ifdef DEBUG
 	cout << "Array copy constructor" << endl;
+#endif
 
 	// set the size of an array
 	this->size = a.getSize();
@@ -201,7 +201,7 @@ template <typename T> T& Array<T>::operator[](int index) {
 
 	// index is wrong
 	string message = "Wrong index";
-	cout << message << " in the getElement function" << endl;
+	cout << message << " in the array method []" << endl;
 	throw message;
 }
 
@@ -315,16 +315,11 @@ template <typename T> void Array<T>::resize(int n) {
 		this->size = n;
 
 		// resize the array 
-		T* temp = new T[this->size];
+		T* temp = new T[this->size]();
 
 		// copy the elements
 		for (int i = 0; i < size; i++) {
 			temp[i] = this->arr[i];
-		}
-
-		// initiate the other elements
-		for (int j = size; j < this->size; j++) {
-			temp[j] = 0;
 		}
 
 		// delete the previous memories
@@ -346,4 +341,15 @@ template <typename T> void Array<T>::relocate(int first, int last, int mode) {
 				this->arr[first - 1] = this->arr[first];
 			}
 		}
+}
+
+// make the array reversed
+template <typename T> void Array<T>::reverse() {
+	int numEle = this->getEleNumber();		// the number of elements
+
+	for (int i = 0; i < numEle/2; i++) {
+		T temp = this->arr[i];
+		this->arr[i] = this->arr[numEle - 1 - i];
+		this->arr[numEle - 1 - i] = temp;
+	}
 }

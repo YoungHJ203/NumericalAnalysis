@@ -16,6 +16,12 @@
     <Filter Include="regression">
       <UniqueIdentifier>{832ccf32-376a-4c31-b3dc-4c770228513e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Point">
+      <UniqueIdentifier>{711aa056-d055-49e2-b4df-95cf69023fbe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Polynominal">
+      <UniqueIdentifier>{5a1bc4aa-c40b-440c-89b3-d897e55ad471}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Matrix.h">
@@ -33,6 +39,15 @@
     <ClInclude Include="Polynominal.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Point.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GE.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="LU.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -45,7 +60,10 @@
       <Filter>regression</Filter>
     </ClCompile>
     <ClCompile Include="Polynominal.cpp">
-      <Filter>regression</Filter>
+      <Filter>Polynominal</Filter>
+    </ClCompile>
+    <ClCompile Include="Point.cpp">
+      <Filter>Point</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

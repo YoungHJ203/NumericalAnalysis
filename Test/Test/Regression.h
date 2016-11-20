@@ -106,6 +106,8 @@ public:
 
 			// change the status 
 			this->status = 1;
+
+			this->calStAndSr();
 		}
 
 		// when the more data points are needed
@@ -133,6 +135,9 @@ public:
 			}
 
 			cout << endl;
+			cout << "St = " << this->St <<endl;
+			cout << "Sr = " << this->Sr << endl;
+
 		}
 	}
 
@@ -161,7 +166,33 @@ public:
 		}
 	}
 
-private:
+private: 
+	// calculate the sum of the squares of deviation, St 
+	// and calculate the sum of the squares of errors
+	void calStAndSr() {
+		// set the regression characteristic value equal to zero
+		this->Sr = 0;
+		this->St = 0;
+
+		// mean value of y's
+		float mean = 0;
+		for (int i = 1; i <= numData; i++) {
+			mean += y(i, 1);
+		}
+		mean /= numData;
+
+		for (int i = 1; i <= this->numData; i++) {
+			this->St += (y(i, 1) - mean)*(y(i, 1) - mean);
+
+			float sum = 0;
+			for (int j = 1; j <= this->order + 1; j++) {
+				sum += x(i, j)*a(j, 1);
+			}
+
+			this->Sr += (y(i, 1) - sum)*(y(i, 1) - sum);
+		}
+	}
+
 	// Matrix that stores data points
 	Matrix a;			// regressed polynominal coefficients	
 	Matrix y;			// dependant data points
@@ -169,4 +200,6 @@ private:
 	int order;			// polynominal's order
 	int numData;		// The number of data points
 	int status;			// check whether the regression is done
+	float St;			// Total sum of the squares of deviation
+	float Sr;			// Sum of the squares of errors
 };

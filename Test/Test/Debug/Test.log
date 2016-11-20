@@ -1,47 +1,4 @@
-﻿  matrix.cpp
-c:\users\young\gitproject\numericalanalysis\test\test\matrix.h(47): warning C4018: '<': signed/unsigned mismatch
-c:\users\young\gitproject\numericalanalysis\test\test\matrix.h(48): warning C4018: '<': signed/unsigned mismatch
-c:\users\young\gitproject\numericalanalysis\test\test\matrix.cpp(21): warning C4018: '<=': signed/unsigned mismatch
-c:\users\young\gitproject\numericalanalysis\test\test\matrix.cpp(22): warning C4018: '<=': signed/unsigned mismatch
-c:\users\young\gitproject\numericalanalysis\test\test\matrix.cpp(51): warning C4018: '<': signed/unsigned mismatch
-c:\users\young\gitproject\numericalanalysis\test\test\matrix.cpp(52): warning C4018: '<': signed/unsigned mismatch
-c:\users\young\gitproject\numericalanalysis\test\test\matrix.cpp(83): warning C4018: '<': signed/unsigned mismatch
-c:\users\young\gitproject\numericalanalysis\test\test\matrix.cpp(85): warning C4018: '<': signed/unsigned mismatch
-c:\users\young\gitproject\numericalanalysis\test\test\matrix.cpp(98): warning C4018: '<': signed/unsigned mismatch
-c:\users\young\gitproject\numericalanalysis\test\test\matrix.cpp(100): warning C4018: '<': signed/unsigned mismatch
-c:\users\young\gitproject\numericalanalysis\test\test\matrix.cpp(121): warning C4018: '>': signed/unsigned mismatch
-c:\users\young\gitproject\numericalanalysis\test\test\matrix.cpp(125): warning C4018: '>': signed/unsigned mismatch
-c:\users\young\gitproject\numericalanalysis\test\test\matrix.cpp(147): warning C4018: '<=': signed/unsigned mismatch
-c:\users\young\gitproject\numericalanalysis\test\test\matrix.cpp(148): warning C4018: '<=': signed/unsigned mismatch
-c:\users\young\gitproject\numericalanalysis\test\test\matrix.cpp(179): warning C4018: '<=': signed/unsigned mismatch
-c:\users\young\gitproject\numericalanalysis\test\test\matrix.cpp(180): warning C4018: '<=': signed/unsigned mismatch
-c:\users\young\gitproject\numericalanalysis\test\test\matrix.cpp(190): warning C4018: '<=': signed/unsigned mismatch
-c:\users\young\gitproject\numericalanalysis\test\test\matrix.cpp(207): warning C4018: '<=': signed/unsigned mismatch
-c:\users\young\gitproject\numericalanalysis\test\test\matrix.cpp(208): warning C4018: '<=': signed/unsigned mismatch
-c:\users\young\gitproject\numericalanalysis\test\test\matrix.cpp(228): warning C4018: '<=': signed/unsigned mismatch
-c:\users\young\gitproject\numericalanalysis\test\test\matrix.cpp(229): warning C4018: '<=': signed/unsigned mismatch
-c:\users\young\gitproject\numericalanalysis\test\test\matrix.cpp(249): warning C4018: '<=': signed/unsigned mismatch
-c:\users\young\gitproject\numericalanalysis\test\test\matrix.cpp(250): warning C4018: '<=': signed/unsigned mismatch
-c:\users\young\gitproject\numericalanalysis\test\test\matrix.cpp(252): warning C4018: '<=': signed/unsigned mismatch
-c:\users\young\gitproject\numericalanalysis\test\test\matrix.cpp(263): warning C4018: '<=': signed/unsigned mismatch
-c:\users\young\gitproject\numericalanalysis\test\test\matrix.cpp(264): warning C4018: '<=': signed/unsigned mismatch
-c:\users\young\gitproject\numericalanalysis\test\test\matrix.cpp(270): warning C4018: '<=': signed/unsigned mismatch
-c:\users\young\gitproject\numericalanalysis\test\test\matrix.cpp(271): warning C4018: '<=': signed/unsigned mismatch
-c:\users\young\gitproject\numericalanalysis\test\test\matrix.cpp(288): warning C4018: '<=': signed/unsigned mismatch
-c:\users\young\gitproject\numericalanalysis\test\test\matrix.cpp(289): warning C4018: '<=': signed/unsigned mismatch
-c:\users\young\gitproject\numericalanalysis\test\test\matrix.cpp(303): warning C4018: '<': signed/unsigned mismatch
-c:\users\young\gitproject\numericalanalysis\test\test\matrix.cpp(305): warning C4018: '<': signed/unsigned mismatch
-  Generating Code...
-  Compiling...
-  regression.cpp
-c:\users\young\gitproject\numericalanalysis\test\test\matrix.h(47): warning C4018: '<': signed/unsigned mismatch
-c:\users\young\gitproject\numericalanalysis\test\test\matrix.h(48): warning C4018: '<': signed/unsigned mismatch
-c:\users\young\gitproject\numericalanalysis\test\test\ge.h(61): warning C4018: '<=': signed/unsigned mismatch
-c:\users\young\gitproject\numericalanalysis\test\test\ge.h(72): warning C4018: '<=': signed/unsigned mismatch
-c:\users\young\gitproject\numericalanalysis\test\test\ge.h(76): warning C4018: '<=': signed/unsigned mismatch
-c:\users\young\gitproject\numericalanalysis\test\test\ge.h(78): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-c:\users\young\gitproject\numericalanalysis\test\test\regression.h(88): warning C4800: 'int': forcing value to bool 'true' or 'false' (performance warning)
-  main.cpp
+﻿  main.cpp
 c:\users\young\gitproject\numericalanalysis\test\test\matrix.h(47): warning C4018: '<': signed/unsigned mismatch
 c:\users\young\gitproject\numericalanalysis\test\test\matrix.h(48): warning C4018: '<': signed/unsigned mismatch
 c:\users\young\gitproject\numericalanalysis\test\test\ge.h(61): warning C4018: '<=': signed/unsigned mismatch
@@ -51,5 +8,7 @@ c:\users\young\gitproject\numericalanalysis\test\test\ge.h(78): warning C4244: '
 c:\users\young\gitproject\numericalanalysis\test\test\regression.h(88): warning C4800: 'int': forcing value to bool 'true' or 'false' (performance warning)
   Generating Code...
 c:\users\young\gitproject\numericalanalysis\test\test\ge.h(56): warning C4715: 'GE::elimination': not all control paths return a value
+  Skipping... (no relevant changes detected)
+  regression.cpp
   Test.vcxproj -> C:\Users\Young\gitProject\NumericalAnalysis\Test\Debug\Test.exe
   Test.vcxproj -> C:\Users\Young\gitProject\NumericalAnalysis\Test\Debug\Test.pdb (Full PDB)

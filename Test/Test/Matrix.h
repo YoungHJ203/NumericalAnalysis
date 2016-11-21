@@ -11,7 +11,6 @@ public:
 	Matrix(int nRow, int nCol);					// general constructor
 	Matrix(int nRow, int nCol, Array<float> a);	// general constructor
 	Matrix(float i);							// convert constructor
-
 	// destructor
 	~Matrix();
 
@@ -41,17 +40,7 @@ public:
 	void operator=(Matrix & a);
 
 	// transpose 
-	Matrix Trans() {
-		Matrix T(this->nCol, this->nRow);
-
-		for (int i = 0; i < this->nCol; i++) {
-			for (int j = 0; j < this->nRow; j++) {
-				T(i + 1, j + 1) = (*this)(j + 1, i + 1);
-			}
-		}
-
-		return T;
-	}
+	Matrix Trans();
 
 	// function operator overloading 
 	float& operator()(int row, int col);

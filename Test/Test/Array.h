@@ -21,9 +21,6 @@ public:
 	// initiate the array
 	void init();
 
-	// print the array
-	void printArray();
-
 	// check if the array is Empty
 	inline bool isEmpty();
 
@@ -123,15 +120,6 @@ template <typename T> void Array<T>::init() {
 	for (int i = 0; i < this->size; i++) {
 		this->arr[i] = NULL;
 	}
-}
-
-// print the array
-template <typename T> void Array<T>::printArray() {
-	cout << "=== array ===" << endl;
-	for (int i = 0; i <= this->top; i++) {
-		cout << " " << this->arr[i] << endl;
-	}
-	cout << "=============" << endl;
 }
 
 // check if the array is Empty

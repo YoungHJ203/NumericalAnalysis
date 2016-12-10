@@ -3,6 +3,7 @@
 #include"Point.h"
 #include"GE.h"
 #include<fstream>
+#include<vector>
 
 // Polynominal Regression Class
 class Regression {

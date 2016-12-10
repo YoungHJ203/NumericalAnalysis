@@ -184,6 +184,19 @@ void Matrix::operator=(Matrix & a) {
 
 }
 
+// transpose 
+Matrix Matrix::Trans() {
+	Matrix T(this->nCol, this->nRow);
+
+	for (int i = 0; i < this->nCol; i++) {
+		for (int j = 0; j < this->nRow; j++) {
+			T(i + 1, j + 1) = (*this)(j + 1, i + 1);
+		}
+	}
+
+	return T;
+}
+
 // function operator overloading (getting element)
 float& Matrix::operator()(int row, int col) {	// get the element of (i,j)
 												// check the given indices
@@ -259,14 +272,16 @@ Matrix operator*(Matrix & a, Matrix & b) {
 		return c;
 	}
 	// constant multiplation
-	else if (a.nRow == 1 && a.nCol == 1) {		// in the case that 'a' is constant
+	// in the case that 'a' is constant
+	else if (a.nRow == 1 && a.nCol == 1) {		
 		for (int i = 1; i <= b.nRow; i++) {
 			for (int j = 1; j <= b.nCol; j++) {
 				b(i, j) *= a(1, 1);
 			}
 		}
 	}
-	else if (b.nRow == 1 && b.nCol == 1) {		// in the case that 'b' is constant
+	// in the case that 'b' is constant
+	else if (b.nRow == 1 && b.nCol == 1) {		
 		for (int i = 1; i <= a.nRow; i++) {
 			for (int j = 1; j <= a.nCol; j++) {
 				a(i, j) *= b(1, 1);

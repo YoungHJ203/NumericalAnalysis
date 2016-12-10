@@ -33,6 +33,10 @@ void RK::method(Polynomial& p, float ti, float yi, float tf, float del, Mode m) 
 		case 1: {
 			phi = RK::ralston; break;
 		}
+		//euler method
+		case 2: {
+			phi = RK::euler; break;
+		}
 		// else other method
 		default: { return; } 
 	}
@@ -72,4 +76,9 @@ float RK::heun(Polynomial& p, float t1, float t2) {
 float RK::ralston(Polynomial& p, float t1, float t2){
 	float h = t2 - t1;
 	return (p(t1) + 2 * p(t1 + 3 * h / 4)) / 3;
+}
+
+// get the average slope of the intheval using euler method
+float RK::euler(Polynomial& p , float t1, float t2) {
+	return p(t1);
 }

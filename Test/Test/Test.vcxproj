@@ -147,21 +147,28 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="Array.h" />
+    <ClInclude Include="Complex.h" />
     <ClInclude Include="GE.h" />
+    <ClInclude Include="RK.h" />
     <ClInclude Include="LU.h" />
     <ClInclude Include="Matrix.h" />
     <ClInclude Include="Point.h" />
-    <ClInclude Include="Polynominal.h" />
+    <ClInclude Include="Polynomial.h" />
     <ClInclude Include="Regression.h" />
     <ClInclude Include="Vector.h" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <ClCompile Include="Array.cpp" />
+=======
+    <ClCompile Include="Complex.cpp" />
+>>>>>>> e4dc7ee93f5f352324dd57ee7bbdcdf785e80acb
     <ClCompile Include="main.cpp" />
     <ClCompile Include="matrix.cpp" />
     <ClCompile Include="Point.cpp" />
-    <ClCompile Include="Polynominal.cpp" />
+    <ClCompile Include="Polynomial.cpp" />
     <ClCompile Include="regression.cpp" />
+    <ClCompile Include="Rk.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

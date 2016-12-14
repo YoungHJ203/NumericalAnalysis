@@ -22,8 +22,16 @@
     <Filter Include="Polynominal">
       <UniqueIdentifier>{5a1bc4aa-c40b-440c-89b3-d897e55ad471}</UniqueIdentifier>
     </Filter>
+<<<<<<< HEAD
     <Filter Include="Array">
       <UniqueIdentifier>{5ae8b546-a286-4e2e-b9af-85b798f227b0}</UniqueIdentifier>
+=======
+    <Filter Include="Complex">
+      <UniqueIdentifier>{a0b1acbd-5eeb-4645-9bd4-5e946820313a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Runge_Kutta">
+      <UniqueIdentifier>{89cbbb26-e3f5-4c1c-8080-be59d1ed20ad}</UniqueIdentifier>
+>>>>>>> e4dc7ee93f5f352324dd57ee7bbdcdf785e80acb
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -39,9 +47,6 @@
     <ClInclude Include="Vector.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Polynominal.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Point.h">
       <Filter>Header Files</Filter>
     </ClInclude>
@@ -49,6 +54,15 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="LU.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Complex.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="RK.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Polynomial.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -62,14 +76,22 @@
     <ClCompile Include="regression.cpp">
       <Filter>regression</Filter>
     </ClCompile>
-    <ClCompile Include="Polynominal.cpp">
-      <Filter>Polynominal</Filter>
-    </ClCompile>
     <ClCompile Include="Point.cpp">
       <Filter>Point</Filter>
     </ClCompile>
+<<<<<<< HEAD
     <ClCompile Include="Array.cpp">
       <Filter>Array</Filter>
+=======
+    <ClCompile Include="Complex.cpp">
+      <Filter>Complex</Filter>
+    </ClCompile>
+    <ClCompile Include="Rk.cpp">
+      <Filter>Runge_Kutta</Filter>
+    </ClCompile>
+    <ClCompile Include="Polynomial.cpp">
+      <Filter>Polynominal</Filter>
+>>>>>>> e4dc7ee93f5f352324dd57ee7bbdcdf785e80acb
     </ClCompile>
   </ItemGroup>
 </Project>

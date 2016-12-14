@@ -63,6 +63,8 @@ public:
 	// make the array reversed
 	void reverse();
 
+	void temp();
+
 private:
 	// relocate the elements between the index of first and last (mode = 0 ; push backward, mode =1 ; push forward)
 	void relocate(int first, int last, int mode);

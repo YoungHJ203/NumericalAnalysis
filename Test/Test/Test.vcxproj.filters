@@ -22,6 +22,9 @@
     <Filter Include="Polynominal">
       <UniqueIdentifier>{5a1bc4aa-c40b-440c-89b3-d897e55ad471}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Array">
+      <UniqueIdentifier>{5ae8b546-a286-4e2e-b9af-85b798f227b0}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Matrix.h">
@@ -64,6 +67,9 @@
     </ClCompile>
     <ClCompile Include="Point.cpp">
       <Filter>Point</Filter>
+    </ClCompile>
+    <ClCompile Include="Array.cpp">
+      <Filter>Array</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

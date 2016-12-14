@@ -1,14 +1,1 @@
-﻿  main.cpp
-c:\users\young\gitproject\numericalanalysis\test\test\matrix.h(47): warning C4018: '<': signed/unsigned mismatch
-c:\users\young\gitproject\numericalanalysis\test\test\matrix.h(48): warning C4018: '<': signed/unsigned mismatch
-c:\users\young\gitproject\numericalanalysis\test\test\ge.h(61): warning C4018: '<=': signed/unsigned mismatch
-c:\users\young\gitproject\numericalanalysis\test\test\ge.h(72): warning C4018: '<=': signed/unsigned mismatch
-c:\users\young\gitproject\numericalanalysis\test\test\ge.h(76): warning C4018: '<=': signed/unsigned mismatch
-c:\users\young\gitproject\numericalanalysis\test\test\ge.h(78): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-c:\users\young\gitproject\numericalanalysis\test\test\regression.h(88): warning C4800: 'int': forcing value to bool 'true' or 'false' (performance warning)
-  Generating Code...
-c:\users\young\gitproject\numericalanalysis\test\test\ge.h(56): warning C4715: 'GE::elimination': not all control paths return a value
-  Skipping... (no relevant changes detected)
-  regression.cpp
-  Test.vcxproj -> C:\Users\Young\gitProject\NumericalAnalysis\Test\Debug\Test.exe
-  Test.vcxproj -> C:\Users\Young\gitProject\NumericalAnalysis\Test\Debug\Test.pdb (Full PDB)
+﻿
